@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6RS-Ze-1BQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Face_Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y14-Xb-b4S">
+                                <rect key="frame" x="286" y="192" width="26" height="51"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMy-v8-RrS">
+                                <rect key="frame" x="287.5" y="466" width="25" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVY-Zk-6jC">
+                                <rect key="frame" x="249" y="280" width="100" height="117"/>
+                                <state key="normal" image="22"/>
+                                <state key="highlighted" image="damk2"/>
+                                <connections>
+                                    <action selector="faceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imH-og-V2y"/>
+                                    <action selector="faceClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="RHu-qh-x3o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5S-Cf-Y44">
+                                <rect key="frame" x="250" y="20" width="99" height="147"/>
+                                <state key="normal" image="damk2"/>
+                                <state key="highlighted" image="22"/>
+                                <connections>
+                                    <action selector="faceButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QnW-0l-1T8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y14-Xb-b4S" firstAttribute="top" secondItem="z5S-Cf-Y44" secondAttribute="bottom" constant="25" id="1aE-4M-iH2"/>
+                            <constraint firstItem="pMy-v8-RrS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="3Nv-6A-KrR"/>
+                            <constraint firstItem="z5S-Cf-Y44" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="67J-8i-oaU"/>
+                            <constraint firstItem="y14-Xb-b4S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2S-2J-qw4"/>
+                            <constraint firstItem="YVY-Zk-6jC" firstAttribute="top" secondItem="y14-Xb-b4S" secondAttribute="bottom" constant="37" id="cic-6f-qnw"/>
+                            <constraint firstItem="pMy-v8-RrS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="okz-AE-KCt"/>
+                            <constraint firstItem="YVY-Zk-6jC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rsq-w7-wF0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2fv-wt-ms9"/>
+                    <connections>
+                        <outlet property="faceClicksTextField" destination="y14-Xb-b4S" id="zfP-g6-oRv"/>
+                        <outlet property="facebutton" destination="YVY-Zk-6jC" id="4Kb-h3-sAl"/>
+                        <outlet property="facebutton2" destination="z5S-Cf-Y44" id="1uy-o0-2vk"/>
+                        <outlet property="textBox" destination="pMy-v8-RrS" id="2ie-jc-H1K"/>
+                        <segue destination="yLk-zc-6K5" kind="show" identifier="philViewControllerSegue" id="3N7-hq-6vM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="264"/>
+        </scene>
+        <!--Phil View Controller-->
+        <scene sceneID="b0f-pS-HmZ">
+            <objects>
+                <viewController id="yLk-zc-6K5" customClass="philViewController" customModule="Face_Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OF8-t8-UoU"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Cu-Zg-Np4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nrd-X5-bXa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BONUS PHIL ROUND!!!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz2-VZ-NAh">
+                                <rect key="frame" x="60.5" y="84" width="480" height="99.5"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f1-pl-2vN" customClass="PhilButton" customModule="Face_Button" customModuleProvider="target">
+                                <rect key="frame" x="198" y="206" width="204" height="188"/>
+                                <state key="normal" title="Button" image="phil"/>
+                                <state key="highlighted" image="phil3"/>
+                                <connections>
+                                    <action selector="moveButton:" destination="yLk-zc-6K5" eventType="touchUpInside" id="djf-iG-zCf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1f1-pl-2vN" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="6hz-HJ-0Mh"/>
+                            <constraint firstItem="hz2-VZ-NAh" firstAttribute="width" secondItem="Nrd-X5-bXa" secondAttribute="width" multiplier="0.8" id="7VR-Vl-ul4"/>
+                            <constraint firstItem="hz2-VZ-NAh" firstAttribute="top" secondItem="OF8-t8-UoU" secondAttribute="bottom" constant="20" id="BCe-cs-31w"/>
+                            <constraint firstItem="hz2-VZ-NAh" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="Q0i-1h-Tpp"/>
+                            <constraint firstItem="1f1-pl-2vN" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="b3u-u3-K1A"/>
+                            <constraint firstItem="1f1-pl-2vN" firstAttribute="centerY" secondItem="Nrd-X5-bXa" secondAttribute="centerY" id="bze-av-Aoa"/>
+                            <constraint firstItem="1f1-pl-2vN" firstAttribute="centerY" secondItem="Nrd-X5-bXa" secondAttribute="centerY" id="uql-kC-Rf6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6hz-HJ-0Mh"/>
+                                <exclude reference="uql-kC-Rf6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="philButton" destination="1f1-pl-2vN" id="Lvr-vP-fWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfN-u7-DXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="275"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fig-LZ-zLa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6RS-Ze-1BQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b6B-Ri-6bZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mtU-l3-ggO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksg-Fq-tMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="264"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="22" width="100" height="117"/>
+        <image name="damk2" width="99" height="147"/>
+        <image name="phil" width="150" height="188"/>
+        <image name="phil3" width="150" height="188"/>
+    </resources>
+</document>
