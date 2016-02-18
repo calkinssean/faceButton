@@ -13,6 +13,8 @@
 		14128B0B1C61095D004C7E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14128B091C61095D004C7E03 /* Main.storyboard */; };
 		14128B0D1C61095D004C7E03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14128B0C1C61095D004C7E03 /* Assets.xcassets */; };
 		14128B101C61095D004C7E03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14128B0E1C61095D004C7E03 /* LaunchScreen.storyboard */; };
+		14FE6F0C1C757DC000C5ED96 /* Bloodthirsty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FE6F0B1C757DC000C5ED96 /* Bloodthirsty.ttf */; };
+		14FE6F0E1C757E4600C5ED96 /* CFMyBloodyValentine-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FE6F0D1C757E4600C5ED96 /* CFMyBloodyValentine-Regular.ttf */; };
 		14FFAA941C6D709700220744 /* philViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFAA931C6D709700220744 /* philViewController.swift */; };
 		14FFAA961C6D7B7900220744 /* PhilButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFAA951C6D7B7900220744 /* PhilButton.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		14128B0C1C61095D004C7E03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14128B0F1C61095D004C7E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14128B111C61095D004C7E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FE6F0B1C757DC000C5ED96 /* Bloodthirsty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bloodthirsty.ttf; path = ../Bloodthirsty.ttf; sourceTree = "<group>"; };
+		14FE6F0D1C757E4600C5ED96 /* CFMyBloodyValentine-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CFMyBloodyValentine-Regular.ttf"; path = "../CFMyBloodyValentine-Regular.ttf"; sourceTree = "<group>"; };
 		14FFAA931C6D709700220744 /* philViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = philViewController.swift; path = ../philViewController.swift; sourceTree = "<group>"; };
 		14FFAA951C6D7B7900220744 /* PhilButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhilButton.swift; path = ../PhilButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +72,8 @@
 				14128B0C1C61095D004C7E03 /* Assets.xcassets */,
 				14128B0E1C61095D004C7E03 /* LaunchScreen.storyboard */,
 				14128B111C61095D004C7E03 /* Info.plist */,
+				14FE6F0D1C757E4600C5ED96 /* CFMyBloodyValentine-Regular.ttf */,
+				14FE6F0B1C757DC000C5ED96 /* Bloodthirsty.ttf */,
 				14FFAA951C6D7B7900220744 /* PhilButton.swift */,
 			);
 			path = "Face Button";
@@ -131,9 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FE6F0E1C757E4600C5ED96 /* CFMyBloodyValentine-Regular.ttf in Resources */,
 				14128B101C61095D004C7E03 /* LaunchScreen.storyboard in Resources */,
 				14128B0D1C61095D004C7E03 /* Assets.xcassets in Resources */,
 				14128B0B1C61095D004C7E03 /* Main.storyboard in Resources */,
+				14FE6F0C1C757DC000C5ED96 /* Bloodthirsty.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

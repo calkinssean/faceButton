@@ -15,8 +15,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var clicks: CGFloat = 0
     var timer: NSTimer?
-    var count: CGFloat = 30
-    let speed : NSTimeInterval = 0.1
+    var xCount: CGFloat = 30
+    var yCount: CGFloat = 30
+    let speed : NSTimeInterval = 0.001
+    var xHasReachedMax = false
+    var yHasReachedMax = false
     
     @IBOutlet weak var faceClicksTextField: UITextField!
     @IBOutlet weak var facebutton2: UIButton!
@@ -29,7 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         faceClicksTextField.text = "\(clicks)"
         backgroundColor()
         checkForBonusRound()
-        count = 0
+       
     
         timer = NSTimer.scheduledTimerWithTimeInterval(speed, target: self, selector: "updateFace", userInfo: nil, repeats: true)
         updateFace()
@@ -46,15 +49,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     func updateFace() {
-        
-        if count <= 800{
-            backgroundColor()
-            seanButton.center.x = (count)
-            seanButton.center.y = (count)
-            count++
-        } else {
-            timer?.invalidate()
+        if yCount == 770 {
+            yHasReachedMax = true
+            
         }
+        if yHasReachedMax == false {
+            yCount++
+            seanButton.center.y = (yCount)
+            
+        }
+        if yHasReachedMax == true {
+            yCount--
+            seanButton.center.y = (yCount)
+        }
+        if yCount == 30 {
+            yHasReachedMax = false
+            
+        }
+        if xCount == 400 {
+            xHasReachedMax = true
+            
+        }
+        if xHasReachedMax == false {
+            xCount++
+            seanButton.center.x = (xCount)
+            
+        }
+        if xHasReachedMax == true {
+            xCount--
+            seanButton.center.x = (xCount)
+            
+        }
+        if xCount == 30 {
+            xHasReachedMax = false
+
+        }
+        
+        
+    
+    
     }
     
     

@@ -3,8 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CFMyBloodyValentine-Regular.ttf">
+            <string>CFMyBloodyValentine-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -87,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BONUS PHIL ROUND!!!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz2-VZ-NAh">
-                                <rect key="frame" x="60.5" y="84" width="480" height="99.5"/>
+                                <rect key="frame" x="60" y="84" width="480" height="99.5"/>
                                 <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="42"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -100,12 +106,21 @@
                                     <action selector="moveButton:" destination="yLk-zc-6K5" eventType="touchUpInside" id="djf-iG-zCf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvJ-UR-r0h" customClass="PhilButton" customModule="Face_Button" customModuleProvider="target">
+                                <rect key="frame" x="225" y="363" width="150" height="188"/>
+                                <state key="normal" image="phil2"/>
+                                <connections>
+                                    <segue destination="KdT-e6-Fib" kind="show" id="dGY-sR-QKi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2Cu-Zg-Np4" firstAttribute="top" secondItem="pvJ-UR-r0h" secondAttribute="bottom" id="1Jc-Pt-zN8"/>
                             <constraint firstItem="1f1-pl-2vN" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="6hz-HJ-0Mh"/>
                             <constraint firstItem="hz2-VZ-NAh" firstAttribute="width" secondItem="Nrd-X5-bXa" secondAttribute="width" multiplier="0.8" id="7VR-Vl-ul4"/>
                             <constraint firstItem="hz2-VZ-NAh" firstAttribute="top" secondItem="OF8-t8-UoU" secondAttribute="bottom" constant="20" id="BCe-cs-31w"/>
+                            <constraint firstItem="pvJ-UR-r0h" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="Bpf-fJ-H3O"/>
                             <constraint firstItem="hz2-VZ-NAh" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="Q0i-1h-Tpp"/>
                             <constraint firstItem="1f1-pl-2vN" firstAttribute="centerX" secondItem="Nrd-X5-bXa" secondAttribute="centerX" id="b3u-u3-K1A"/>
                             <constraint firstItem="1f1-pl-2vN" firstAttribute="centerY" secondItem="Nrd-X5-bXa" secondAttribute="centerY" id="bze-av-Aoa"/>
@@ -126,6 +141,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfN-u7-DXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2428" y="275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0xj-6i-iaN">
+            <objects>
+                <viewController id="KdT-e6-Fib" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iw3-XF-dwQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fwh-jm-21q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qWE-Xk-Ra5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU LOSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVn-uM-1qw">
+                                <rect key="frame" x="20" y="64" width="560" height="487"/>
+                                <fontDescription key="fontDescription" name="CFMyBloodyValentine-Regular" family="CF My Bloody Valentine" pointSize="200"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nVn-uM-1qw" firstAttribute="top" secondItem="iw3-XF-dwQ" secondAttribute="bottom" id="PKu-WB-odh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nVn-uM-1qw" secondAttribute="trailing" id="QSE-0Z-8PF"/>
+                            <constraint firstItem="fwh-jm-21q" firstAttribute="top" secondItem="nVn-uM-1qw" secondAttribute="bottom" id="i6I-N3-44D"/>
+                            <constraint firstItem="nVn-uM-1qw" firstAttribute="leading" secondItem="qWE-Xk-Ra5" secondAttribute="leadingMargin" id="jO0-pw-FWB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgh-9y-0WK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="979"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fig-LZ-zLa">
@@ -167,6 +214,7 @@
         <image name="22" width="100" height="117"/>
         <image name="damk2" width="99" height="147"/>
         <image name="phil" width="150" height="188"/>
+        <image name="phil2" width="150" height="188"/>
         <image name="phil3" width="150" height="188"/>
     </resources>
 </document>
